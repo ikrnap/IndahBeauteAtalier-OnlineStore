@@ -1,96 +1,65 @@
-﻿# 🌟 Indah's Beauté Atelier
+# 🛍️ INDAH'S BEAUTÉ ATELIER
 
-> Proyek tugas akhir KAIT II, Program Studi Administrasi Bisnis.
+### 👤 IDENTITAS MAHASISWA
+* **Nama Mahasiswa:** Indah Kirana Putri
+* **Mata Kuliah:** Komputer Aplikasi IT-II (KAIT II)
+* **Program Studi:** Administrasi Bisnis
+* **Semester:** Genap 2025/2026
+* **Bobot Tugas:** 40% dari Nilai Akhir
 
-Website ini adalah prototype e-commerce statis untuk produk kecantikan, dibuat dengan HTML, CSS, dan JavaScript.
+---
 
-## Fitur Utama
+## 🔗 LINK AKSES UTAMA
+* **Link Live Website (Customer):** [https://indahkiranaputri.github.io/IndahBeauteAtalier-OnlineStore/](https://ikrnap.github.io/IndahBeauteAtalier-OnlineStore/)
+* **Link Halaman Admin:** [https://indahkiranaputri.github.io/IndahBeauteAtalier-OnlineStore/admin_login.html](https://ikrnap.github.io/IndahBeauteAtalier-OnlineStore/admin_login.html)
+* **Link Repository GitHub:** [https://github.com/indahkiranaputri/IndahBeauteAtalier-OnlineStore](https://github.com/ikrnap/IndahBeauteAtalier-OnlineStore)
 
-- Katalog produk dan halaman detail produk
-- Keranjang belanja dengan update jumlah dan hapus barang
-- Checkout sederhana dengan formulir data pengiriman
-- Halaman admin untuk mengelola produk dan melihat pesanan
- - Data produk, keranjang, ulasan, dan pesanan disimpan di server (SQLite: `data/db.sqlite`) melalui REST API.
-	`data/db.json` hanya digunakan sebagai seed/migrasi awal — server akan memigrasi isi `data/db.json` ke SQLite pada startup jika database kosong.
-	Browser `localStorage` hanya digunakan sebagai fallback untuk pengguna anonim.
+---
 
-## Struktur File Utama
-Pastikan upload semua file berikut ke root repository GitHub:
+## 📝 DESKRIPSI & STRATEGI BISNIS MODERN
 
-- `index.html`
-- `keranjang.html`
-- `checkout.html`
-- `order_success.html`
-- `detail_produk.html`
-- `login.html`
-- `register.html`
-- `profile.html`
-- `tracking.html`
-- `admin_dashboard.html`
-- `admin_produk.html`
-- `admin_pesanan.html`
-- `admin_tambah_produk.html`
-- `admin_edit_produk.html`
-- `admin_login.html`
-- `css/`
-- `js/`
-- `image/`
+### 1. Judul Proyek
+“Membangun Website E-Commerce Fungsional dengan Integrasi Strategi Bisnis Modern”
 
-> Catatan: Folder gambar berada di `image/`, bukan `images/`.
+### 2. Business Overview
+* **Nama & Deskripsi Bisnis:** **Indah's Beauté Atelier** adalah platform e-commerce produk kosmetik dan skincare kurasi lokal bermutu tinggi yang aman dan teruji.
+* **Value Proposition:** Menyediakan produk kecantikan premium *cruelty-free* dengan transparansi harga dan pengalaman belanja yang personal.
+* **Target Market:** Perempuan urban usia 18–35 tahun (mahasiswi & pekerja) yang peduli pada kesehatan kulit jangka panjang.
+* **Analisis Pasar & Kompetitor:** Mengambil ceruk pasar (*niche*) dengan mengandalkan tampilan visual web yang minimalis, intim, estetis, dan ramah pengguna dibanding platform kosmetik massal yang terlalu ramai.
+* **Model Bisnis & Revenue Stream:** B2C (Business-to-Consumer) Online Retailer dengan sumber pendapatan utama dari penjualan langsung ke konsumen akhir.
+* **Strategi Harga & Promosi:** Penerapan *value-based pricing*, sistem kupon diskon musiman, serta paket *bundling* produk untuk meningkatkan nilai transaksi.
+* **Proses Checkout & Payment:** Simulasi alur pengisian form pengiriman hingga proses pembayaran menggunakan sistem dummy terintegrasi (seperti Midtrans/Xendit/PayPal).
+* **Rencana SEO & Analytics:** Optimasi metadata tag untuk performa mesin pencari Google, serta pemantauan metrik *Conversion Rate*, *Bounce Rate*, dan *Cart Abandonment Rate*.
 
-## Cara Upload via GitHub Web
+---
 
-1. Buka repository GitHub baru.
-2. Klik `Add file` -> `Upload files`.
-3. Seret seluruh isi folder `indah` ke area upload.
-4. Pastikan `index.html` dan folder `css`, `js`, serta `image` ikut terupload.
-5. Tambahkan pesan commit, misalnya `Upload website files`.
-6. Klik `Commit changes`.
+## 🛠️ FITUR TEKNIS & DOKUMENTASI
 
-## Setting GitHub Pages
+### 1. Fitur Utama Website (Pure Vanilla HTML, CSS, JS)
+* **Responsive Design:** Tampilan fleksibel (CSS Flexbox/Grid) yang optimal saat diakses lewat Desktop, Tablet, maupun HP (Mobile).
+* **Struktur Halaman Lengkap:** Navbar, Hero Banner, Katalog Produk (8–10 produk), Modal Detail Produk, Keranjang Belanja otomatis dengan perhitungan total, Form Checkout, serta Footer.
+* **Fitur Interaktif:** Fungsi pencarian (Search) & filter produk, manajemen penyimpanan keranjang menggunakan `localStorage`, serta animasi mikro yang halus.
+* **Integrasi Analytics:** Menyertakan script pelacakan Google Analytics (dummy) untuk kebutuhan analisis data bisnis.
 
-1. Buka `Settings` di repo GitHub.
-2. Pilih `Pages`.
-3. Pada `Source`, pilih branch `main` dan folder `/(root)`.
-4. Simpan.
-5. Tunggu beberapa menit hingga website muncul.
-
-## Catatan Penting
-
-- Upload normal via GitHub Web sudah cukup.
-- Tidak perlu Git atau command line jika Anda hanya ingin upload biasa.
-- Jika halaman belum muncul, refresh browser beberapa kali.
-
-## Akses Admin
-
-Admin sebaiknya login lewat API (halaman `admin_login.html`) — setelah login, semua operasi CRUD produk dan update pesanan akan disimpan di server (`data/db.json`).
-
-## Host API (Penting)
-
-Catatan: GitHub Pages hanya melayani konten statis — **tidak menjalankan Node.js**. Untuk membuat sinkronisasi (SSoT) bekerja, Anda harus menjalankan `server.js` di host Node (VPS, Render, Fly, Heroku, dll.) atau menjalankan server secara lokal. Jika Anda hanya mengupload ke GitHub Pages tanpa backend, aplikasi akan berjalan dalam mode fallback (mostly localStorage) dan tidak akan tersinkron antar-perangkat.
-
- - Server menggunakan SQLite untuk penyimpanan lokal (`data/db.sqlite`). File ini dibuat otomatis pada saat server pertama kali dijalankan dan berisi data yang sebelumnya ada di `data/db.json`.
- - Jalankan `npm install` terlebih dahulu; beberapa environment mungkin perlu build tools untuk menginstall `better-sqlite3`.
- - Jika frontend dan backend dihost terpisah (mis. frontend di GitHub Pages, backend di Render), tambahkan sebelum `js/api_client.js` sebuah script kecil pada halaman HTML untuk meng-override `API_BASE`, contohnya:
-
-```html
-<script>window.API_BASE = 'https://your-backend.example.com/api';</script>
-<script src="js/api_client.js"></script>
-
-## Deploy Otomatis (GitHub Actions)
-
-Saya sudah menambahkan dua workflow contoh di `.github/workflows/`:
-
-- `deploy-frontend.yml` — membangun folder `public/` dan menerbitkannya ke GitHub Pages saat push ke branch `main`.
-- `deploy-backend.yml` — contoh workflow untuk deploy ke Heroku. Anda perlu menambahkan tiga secrets di repo GitHub: `HEROKU_API_KEY`, `HEROKU_APP_NAME`, dan `HEROKU_EMAIL`.
-
-Langkah cepat:
-1. Push repo ke GitHub `main`.
-2. Di Settings → Secrets, tambahkan `HEROKU_API_KEY`, `HEROKU_APP_NAME`, `HEROKU_EMAIL`.
-3. Aktifkan GitHub Pages (Settings → Pages) untuk branch `gh-pages` atau workflow akan menerbitkan dari `public`.
-
-Catatan: Jika Anda menggunakan provider lain (Render, Railway), Anda bisa menghubungkan repo langsung pada dashboard provider tanpa Actions.
-```
-## Catatan Tambahan
-
-Jika Anda ingin saya cek ulang file yang sudah diupload, beri tahu saya.
+### 2. Struktur Folder Proyek
+```text
+IndahBeauteAtalier-OnlineStore/
+│
+├── index.html                  # Halaman Utama (Customer Store)
+├── checkout.html               # Halaman Form Pembayaran
+├── admin_login.html            # Halaman Login Admin
+├── admin_dashboard.html        # Panel Monitoring Admin
+├── admin_tambah_produk.html    # Form Input Produk Baru
+│
+├── css/
+│   └── style.css               # Desain Responsif (Flexbox/Grid)
+│
+├── js/
+│   ├── main.js                 # Logika Keranjang Belanja & Search
+│   └── admin_script.js         # Pengelolaan Database Local Storage Admin
+│
+└── image/                      # Aset Foto & Visual Produk
+    ├── ampoule baru.jpeg
+    ├── blushon.jpg.jpeg
+    ├── body wash.jpg.jpeg
+    └── claymask baru.jpeg
