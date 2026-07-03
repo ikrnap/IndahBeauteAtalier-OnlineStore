@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daftar — Indah's Beauté Atelier</title>
+  <title>Daftar � Indah's Beaut� Atelier</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DUMMY123"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -176,7 +176,7 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <span class="ad-brand-icon" aria-hidden="true" title="Atelier">IBA</span>
-        <span class="logo-text">Indah's <em>Beauté Atelier</em></span>
+        <span class="logo-text">Indah's <em>Beaut� Atelier</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -196,7 +196,7 @@
       <div class="auth-logo">
         <a href="index.html">
           <span class="ad-brand-icon" aria-hidden="true" title="Atelier">IBA</span>
-          <span class="logo-text">Indah's <em>Beauté Atelier</em></span>
+          <span class="logo-text">Indah's <em>Beaut� Atelier</em></span>
         </a>
       </div>
 
@@ -238,7 +238,9 @@
   <div class="toast" id="toast"></div>
 
   <script src="js/default_products.js"></script>
+  <script>window.API_BASE = 'https://your-backend.example.com/api';</script>
   <script src="js/api_client.js"></script>
+
   <script src="js/script.js"></script>
   <script>
     lucide.createIcons();
@@ -255,12 +257,12 @@
       const msgEl    = document.getElementById('registerMsg');
 
       if (password !== confirm) {
-        msgEl.textContent = '✖ Password dan konfirmasi tidak cocok.';
+        msgEl.textContent = '? Password dan konfirmasi tidak cocok.';
         msgEl.className = 'auth-msg';
         return;
       }
       if (password.length < 6) {
-        msgEl.textContent = '✖ Password minimal 6 karakter.';
+        msgEl.textContent = '? Password minimal 6 karakter.';
         msgEl.className = 'auth-msg';
         return;
       }
@@ -270,11 +272,11 @@
 
       try {
         await registerCustomer(nama, email, password);
-        msgEl.textContent = '✔ Akun berhasil dibuat! Mengarahkan ke halaman login...';
+        msgEl.textContent = '? Akun berhasil dibuat! Mengarahkan ke halaman login...';
         msgEl.className = 'auth-msg success';
         setTimeout(() => { window.location.href = 'login.html'; }, 1200);
       } catch (err) {
-        msgEl.textContent = err.status === 409 ? '✖ Email sudah terdaftar.' : '✖ Gagal mendaftar. Coba lagi.';
+        msgEl.textContent = err.status === 409 ? '? Email sudah terdaftar.' : '? Gagal mendaftar. Coba lagi.';
         msgEl.className = 'auth-msg';
       }
     }
@@ -291,5 +293,6 @@
   <script>initCSWidget();</script>
 </body>
 </html>
+
 
 

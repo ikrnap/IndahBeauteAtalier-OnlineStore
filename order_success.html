@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pesanan Berhasil — Indah's Beauté Atelier</title>
+  <title>Pesanan Berhasil � Indah's Beaut� Atelier</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DUMMY123"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -340,7 +340,7 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <i data-lucide="shopping-bag" class="logo-icon" aria-hidden="true" style="width:22px;height:22px;"></i>
-        <span class="logo-text">Indah's <em> Beauté Atelier</em></span>
+        <span class="logo-text">Indah's <em> Beaut� Atelier</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -349,7 +349,7 @@
         <li><a href="tracking.html" class="nav-link">Pesanan</a></li>
         <li id="navLoginItem"><a href="login.html" class="nav-link">Login</a></li>
         <li id="navUserItem" style="display:none;align-items:center;gap:0.5rem;">
-          <a href="profile.html" class="nav-link" id="navUserName">👤 Akun</a>
+          <a href="profile.html" class="nav-link" id="navUserName">?? Akun</a>
           <button class="nav-link nav-logout-btn" onclick="logoutUser()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;color:inherit;padding:0.4rem 0.75rem;">Keluar</button>
         </li>
       </ul>
@@ -364,9 +364,9 @@
     <div id="indahWatermark">Developed by Indah</div>
     <div class="os-card">
 
-      <div class="os-icon">✔</div>
+      <div class="os-icon">?</div>
       <h1 class="os-title">Pesanan Diterima!</h1>
-      <p class="os-subtitle">Terima kasih sudah memesan di Indah's Beauté Atelier</p>
+      <p class="os-subtitle">Terima kasih sudah memesan di Indah's Beaut� Atelier</p>
 
       <!-- Info pesanan -->
       <div class="os-info-box">
@@ -401,7 +401,7 @@
       <!-- Catatan -->
       <div class="os-note">
         Segera transfer sesuai total ke rekening yang sudah dipilih.<br/>
-        Pesananmu sudah kami kirim ke WhatsApp — harap kirimkan bukti pembayaran agar pesanan segera diproses. 
+        Pesananmu sudah kami kirim ke WhatsApp � harap kirimkan bukti pembayaran agar pesanan segera diproses. 
       </div>
 
       <!-- Tombol aksi -->
@@ -426,7 +426,7 @@
         <!-- diisi JS -->
       </div>
       <div class="struk-actions">
-        <button class="struk-print-btn" onclick="printStruk()">🖨️ Cetak / Simpan PDF</button>
+        <button class="struk-print-btn" onclick="printStruk()">??? Cetak / Simpan PDF</button>
         <button class="struk-close-btn" onclick="closeStruk()">Tutup</button>
       </div>
     </div>
@@ -438,7 +438,9 @@
   <div class="toast" id="toast"></div>
 
   <script src="js/default_products.js"></script>
+  <script>window.API_BASE = 'https://your-backend.example.com/api';</script>
   <script src="js/api_client.js"></script>
+
   <script src="js/script.js"></script>
   <script>
     lucide.createIcons();
@@ -469,17 +471,17 @@
       const ongkir  = order.shipping || 0;
       const itemRows = (order.items || []).map(i => `
         <div class="struk-item">
-          <div class="struk-item-name">${i.emoji || "🛒"} ${i.name}</div>
+          <div class="struk-item-name">${i.emoji || "??"} ${i.name}</div>
           <div class="struk-item-sub">
-            <span>${fmtRp(i.price)} × ${i.qty}</span>
+            <span>${fmtRp(i.price)} � ${i.qty}</span>
             <span>${fmtRp(i.price * i.qty)}</span>
           </div>
         </div>`).join("");
 
       el.innerHTML = `
         <div class="struk-header">
-          <div class="struk-logo">🛒</div>
-          <div class="struk-store">INDAH'S BEAUTÉ ATELIER</div>
+          <div class="struk-logo">??</div>
+          <div class="struk-store">INDAH'S BEAUT� ATELIER</div>
           <div class="struk-tagline">Penyedia Berbagai Produk Premium untuk Kecantikanmu.</div>
           <div class="struk-tagline">WA: 0895-3429-19983</div>
         </div>
@@ -584,7 +586,7 @@
       const itemList = document.getElementById('osItemList');
       itemList.innerHTML = order.items.map(item => `
         <div class="os-item">
-          <div class="os-item-emoji">${item.emoji || '🛍️'}</div>
+          <div class="os-item-emoji">${item.emoji || '???'}</div>
           <div class="os-item-name">${item.name}</div>
           <div class="os-item-qty">x${item.qty}</div>
           <div class="os-item-price">${formatPrice(item.price * item.qty)}</div>
@@ -603,5 +605,6 @@
   <script>initCSWidget();</script>
 </body>
 </html>
+
 
 

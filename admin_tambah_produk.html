@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tambah Produk — Indah's Beauté Atelier Admin</title>
+  <title>Tambah Produk � Indah's Beaut� Atelier Admin</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DUMMY123"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -55,7 +55,7 @@
   <aside class="ad-sidebar">
     <div class="ad-brand">
        <span class="ad-brand-icon" aria-hidden="true" title="Atelier">IBA</span>
-      <div class="ad-brand-name">Indah's Beauté Atelier</div>
+      <div class="ad-brand-name">Indah's Beaut� Atelier</div>
       <div class="ad-brand-sub">Panel Admin</div>
     </div>
     <nav class="ad-nav">
@@ -64,7 +64,7 @@
       <a href="admin_pesanan.html"   class="ad-nav-link"><span class="ad-nav-icon"></span> Pesanan</a>
     </nav>
     <div class="ad-sidebar-footer">
-      <button class="ad-logout-btn" onclick="doLogout()">🚪 Keluar</button>
+      <button class="ad-logout-btn" onclick="doLogout()">?? Keluar</button>
     </div>
   </aside>
 
@@ -112,12 +112,12 @@
             <label>Foto Produk</label>
             <div class="foto-upload-area" id="tpFotoArea" onclick="document.getElementById('tpFoto').click()">
               <input type="file" id="tpFoto" accept="image/*" onchange="previewFoto('tpFoto','tpFotoPreview','tpFotoArea')" />
-              <div class="foto-upload-icon">📸</div>
-              <div class="foto-upload-text">Klik untuk pilih foto produk<br/><small>JPG, PNG, WEBP — Maks. 2MB</small></div>
+              <div class="foto-upload-icon">??</div>
+              <div class="foto-upload-text">Klik untuk pilih foto produk<br/><small>JPG, PNG, WEBP � Maks. 2MB</small></div>
             </div>
             <div class="foto-preview-wrap" id="tpFotoPreview">
               <img id="tpFotoImg" src="" alt="Preview" />
-              <button type="button" class="foto-preview-remove" onclick="removeFoto('tpFoto','tpFotoPreview','tpFotoArea')">✕</button>
+              <button type="button" class="foto-preview-remove" onclick="removeFoto('tpFoto','tpFotoPreview','tpFotoArea')">?</button>
             </div>
             <div id="tpFotoFeedback" class="foto-feedback" style="display:none;margin-top:0.5rem;font-size:0.95rem;color:#374151;"></div>
           </div>
@@ -129,11 +129,11 @@
 
           <label class="ad-checkbox-row">
             <input type="checkbox" id="tpHot" />
-            🔥 Tandai sebagai produk <strong>Hot / Terlaris</strong>
+            ?? Tandai sebagai produk <strong>Hot / Terlaris</strong>
           </label>
 
           <div class="ad-form-actions">
-            <button type="submit" class="ad-submit-btn">✔ Simpan Produk</button>
+            <button type="submit" class="ad-submit-btn">? Simpan Produk</button>
             <a href="admin_produk.html" class="ad-cancel-btn">Batal</a>
           </div>
           <div id="indahWatermark">Developed by Indah</div>
@@ -146,7 +146,9 @@
 
 <div class="toast" id="toast"></div>
 <script src="js/default_products.js"></script>
+<script>window.API_BASE = 'https://your-backend.example.com/api';</script>
 <script src="js/api_client.js"></script>
+
 <script src="js/admin_script.js"></script>
 <script>
   window.addEventListener("DOMContentLoaded", () => {
@@ -155,5 +157,6 @@
 </script>
 </body>
 </html>
+
 
 

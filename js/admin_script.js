@@ -420,6 +420,17 @@ function doLogin(e) {
     document.getElementById("adminLoginMsg").textContent = "❌ Kata sandi wajib.";
     return;
   }
+
+  function fallbackLocalLogin() {
+    if (pwd !== ADMIN_PASSWORD) {
+      document.getElementById("adminLoginMsg").textContent = "❌ Kata sandi salah.";
+      return;
+    }
+    sessionStorage.setItem(ADMIN_SESSION_KEY, "true");
+    document.getElementById("adminPwd").value = '';
+    window.location.href = "admin_dashboard.html";
+  }
+
   // Prefer server admin login when available
   if (typeof loginAdmin === 'function' && typeof setAdminToken === 'function') {
     loginAdmin(pwd).then(res => {
@@ -429,21 +440,16 @@ function doLogin(e) {
         document.getElementById("adminPwd").value = '';
         window.location.href = "admin_dashboard.html";
       } else {
-        document.getElementById("adminLoginMsg").textContent = "❌ Kata sandi salah.";
+        fallbackLocalLogin();
       }
     }).catch(() => {
-      document.getElementById("adminLoginMsg").textContent = "❌ Kata sandi salah.";
+      fallbackLocalLogin();
     });
     return;
   }
 
   // legacy fallback
-  if (pwd !== ADMIN_PASSWORD) {
-    document.getElementById("adminLoginMsg").textContent = "❌ Kata sandi salah.";
-    return;
-  }
-  sessionStorage.setItem(ADMIN_SESSION_KEY, "true");
-  window.location.href = "admin_dashboard.html";
+  fallbackLocalLogin();
 }
 
 function doLogout() {

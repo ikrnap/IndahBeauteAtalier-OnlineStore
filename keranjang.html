@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keranjang — Indah's Beauté Atelier</title>
+  <title>Keranjang � Indah's Beaut� Atelier</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DUMMY123"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -403,7 +403,7 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <span class="ad-brand-icon" aria-hidden="true" title="Atelier">IBA</span>
-        <span class="logo-text">Indah's <em>Beauté Atelier</em></span>
+        <span class="logo-text">Indah's <em>Beaut� Atelier</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -412,7 +412,7 @@
         <li><a href="tracking.html" class="nav-link">Pesanan</a></li>
         <li id="navLoginItem"><a href="login.html" class="nav-link">Login</a></li>
         <li id="navUserItem" style="display:none;align-items:center;gap:0.5rem;">
-          <a href="profile.html" class="nav-link" id="navUserName">👤 Akun</a>
+          <a href="profile.html" class="nav-link" id="navUserName">?? Akun</a>
           <button class="nav-link nav-logout-btn" onclick="logoutUser()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;color:inherit;padding:0.4rem 0.75rem;">Keluar</button>
         </li>
       </ul>
@@ -453,7 +453,7 @@
 
           <!-- Rekomendasi lanjut belanja -->
           <div style="margin-top:1rem;font-size:0.85rem;color:var(--text-light);text-align:center;">
-            Mau tambah lagi? <a href="index.html#products" style="color:var(--pink-deep);font-weight:500;">Lihat semua produk →</a>
+            Mau tambah lagi? <a href="index.html#products" style="color:var(--pink-deep);font-weight:500;">Lihat semua produk ?</a>
           </div>
         </div>
 
@@ -523,7 +523,7 @@
               <i data-lucide="arrow-right"></i> Lanjut Checkout
             </button>
             <a href="index.html#products" class="kr-continue-btn">
-              ← Lanjut Belanja
+              ? Lanjut Belanja
             </a>
           </div>
         </div>
@@ -536,7 +536,9 @@
   <div class="toast" id="toast"></div>
 
   <script src="js/default_products.js"></script>
+  <script>window.API_BASE = 'https://your-backend.example.com/api';</script>
   <script src="js/api_client.js"></script>
+
   <script src="js/script.js"></script>
   <script>
     lucide.createIcons();
@@ -591,7 +593,7 @@
               <div class="kr-item-price">${formatPrice(item.price)}</div>
             </div>
             <div class="kr-qty-wrap">
-            <button class="kr-qty-btn" onclick="krChangeQty(${item.id}, -1)" aria-label="Kurangi">−</button>
+            <button class="kr-qty-btn" onclick="krChangeQty(${item.id}, -1)" aria-label="Kurangi">-</button>
               <div class="kr-qty-num">${item.qty}</div>
               <button class="kr-qty-btn" onclick="krChangeQty(${item.id}, 1)" ${item.qty >= maxStock ? "disabled" : ""} aria-label="Tambah">+</button>
             </div>
@@ -676,7 +678,7 @@
           statusEl.textContent = "Voucher hanya berlaku untuk min. 2 produk.";
           statusEl.className = "kr-voucher-status error";
         } else {
-          statusEl.textContent = `Voucher ${code} aktif — hemat ${formatPrice(summary.discount)}!`;
+          statusEl.textContent = `Voucher ${code} aktif � hemat ${formatPrice(summary.discount)}!`;
           statusEl.className = "kr-voucher-status success";
           renderKeranjang();
         }
@@ -761,5 +763,6 @@
   <script>initCSWidget();</script>
 </body>
 </html>
+
 
 

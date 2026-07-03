@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login — Indah's Beauté Atelier</title>
+  <title>Login � Indah's Beaut� Atelier</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DUMMY123"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -171,7 +171,7 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <span class="ad-brand-icon" aria-hidden="true" title="Atelier">IBA</span>
-        <span class="logo-text">Indah's Beauté Atelier</span>
+        <span class="logo-text">Indah's Beaut� Atelier</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -191,7 +191,7 @@
       <div class="auth-logo">
         <a href="index.html">
           <span class="ad-brand-icon" aria-hidden="true" title="Atelier">IBA</span>
-          <span class="logo-text">Indah's Beauté Atelier</span>
+          <span class="logo-text">Indah's Beaut� Atelier</span>
         </a>
       </div>
 
@@ -205,7 +205,7 @@
         </div>
         <div class="auth-field">
           <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" name="password" placeholder="••••••••" required />
+          <input type="password" id="loginPassword" name="password" placeholder="��������" required />
         </div>
         <button type="submit" class="auth-btn">Masuk</button>
         <p class="auth-msg" id="loginMsg"></p>
@@ -224,7 +224,9 @@
   <div class="toast" id="toast"></div>
 
   <script src="js/default_products.js"></script>
+  <script>window.API_BASE = 'https://your-backend.example.com/api';</script>
   <script src="js/api_client.js"></script>
+
   <script src="js/script.js"></script>
   <script>
     // Init halaman login
@@ -288,11 +290,11 @@
               try { safeRemoveItem ? safeRemoveItem(STORAGE_REVIEWS_KEY) : localStorage.removeItem(STORAGE_REVIEWS_KEY); } catch(e) {}
             }
           } catch(e) { /* ignore */ }
-        msgEl.textContent = '✔ Berhasil masuk! Mengalihkan...';
+        msgEl.textContent = '? Berhasil masuk! Mengalihkan...';
         msgEl.className = 'auth-msg success';
         setTimeout(() => { window.location.href = 'index.html'; }, 900);
       } catch (err) {
-        msgEl.textContent = '❌ Email atau password salah.';
+        msgEl.textContent = '? Email atau password salah.';
         msgEl.className = 'auth-msg';
       }
     }
@@ -309,5 +311,6 @@
   <script>initCSWidget();</script>
 </body>
 </html>
+
 
 

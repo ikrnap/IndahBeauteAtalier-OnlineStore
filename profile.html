@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profil Saya — Indah's Beauté Atelier</title>
+  <title>Profil Saya � Indah's Beaut� Atelier</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DUMMY123"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -349,7 +349,7 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <span class="ad-brand-icon" aria-hidden="true" title="Atelier">IBA</span>
-        <span class="logo-text">Indah's <em> Beauté Atelier</em></span>
+        <span class="logo-text">Indah's <em> Beaut� Atelier</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -358,7 +358,7 @@
         <li><a href="tracking.html" class="nav-link">Pesanan</a></li>
         <li id="navLoginItem"><a href="login.html" class="nav-link">Login</a></li>
         <li id="navUserItem" style="display:none;align-items:center;gap:0.5rem;">
-          <a href="profile.html" class="nav-link active" id="navUserName">👤 Akun</a>
+          <a href="profile.html" class="nav-link active" id="navUserName">?? Akun</a>
           <button class="nav-link nav-logout-btn" onclick="logoutUser()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;color:inherit;padding:0.4rem 0.75rem;">Keluar</button>
         </li>
       </ul>
@@ -384,9 +384,9 @@
         <aside class="pf-sidebar">
           <!-- Avatar -->
           <div class="pf-avatar-box">
-            <div class="pf-avatar">✧</div>
-            <div class="pf-avatar-name" id="pfAvatarName">—</div>
-            <div class="pf-avatar-email" id="pfAvatarEmail">—</div>
+            <div class="pf-avatar">?</div>
+            <div class="pf-avatar-name" id="pfAvatarName">�</div>
+            <div class="pf-avatar-email" id="pfAvatarEmail">�</div>
           </div>
 
           <button class="pf-menu-btn active" data-panel="akun">
@@ -442,7 +442,7 @@
               <h3> Ubah Password</h3>
               <div class="pf-field">
                 <label for="pfOldPass">Password Lama</label>
-                <input type="password" id="pfOldPass" placeholder="••••••••" />
+                <input type="password" id="pfOldPass" placeholder="��������" />
               </div>
               <div class="pf-field">
                 <label for="pfNewPass">Password Baru</label>
@@ -468,7 +468,7 @@
               </div>
               <div class="pf-faq-item">
                 <div class="pf-faq-q">Berapa lama pengerjaan Perfume?</div>
-                <div class="pf-faq-a">Biasanya 1–2 hari kerja. Untuk same day bisa diatur, silakan hubungi kami via WhatsApp.</div>
+                <div class="pf-faq-a">Biasanya 1�2 hari kerja. Untuk same day bisa diatur, silakan hubungi kami via WhatsApp.</div>
               </div>
               <div class="pf-faq-item">
                 <div class="pf-faq-q">Apakah bisa custom packaging untuk kado?</div>
@@ -486,7 +486,7 @@
               <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);">
                 <p style="font-size:0.88rem;color:var(--text-mid);margin-bottom:0.75rem;">Masih ada pertanyaan? Hubungi kami langsung:</p>
                 <a href="https://api.whatsapp.com/send?phone=62895342919983" target="_blank" class="pf-save-btn" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;">
-                  💬 Chat via WhatsApp
+                  ?? Chat via WhatsApp
                 </a>
               </div>
             </div>
@@ -501,7 +501,9 @@
   <div class="toast" id="toast"></div>
 
   <script src="js/default_products.js"></script>
+  <script>window.API_BASE = 'https://your-backend.example.com/api';</script>
   <script src="js/api_client.js"></script>
+
   <script src="js/script.js"></script>
   <script>
     lucide.createIcons();
@@ -521,7 +523,7 @@
     bootstrapProfile().catch(console.error);
 
     document.getElementById('pfChangePassBtn').addEventListener('click', () => {
-      showToast('⚠️ Fitur ganti password belum tersedia. Silakan hubungi admin.');
+      showToast('?? Fitur ganti password belum tersedia. Silakan hubungi admin.');
     });
 
     // Logout
@@ -549,5 +551,6 @@
   <script>initCSWidget();</script>
 </body>
 </html>
+
 
 

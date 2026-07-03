@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detail Produk - Indah's Beauté Atelier</title>
+  <title>Detail Produk - Indah's Beaut� Atelier</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DUMMY123"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -93,7 +93,7 @@
     <div class="container header-inner">
       <a class="brand" href="#" onclick="if(typeof navigateTo === 'function') navigateTo('homeView'); else window.location.href='./index.html';">
         <span class="brand-logo" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: var(--primary);">IBA</span>
-        <span class="brand-name" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: 1px; color: var(--text-dark);">Indah's Beauté Atelier</span>
+        <span class="brand-name" style="font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: 1px; color: var(--text-dark);">Indah's Beaut� Atelier</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
@@ -120,7 +120,7 @@
   <footer class="site-footer" style="background: var(--bg-ivory); border-top: 1px solid var(--bg-beige); margin-top: 60px;">
     <div class="container footer-grid">
       <div>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: var(--primary);"><i class="fa-solid fa-store"></i> Indah's Beauté Atelier</h3>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: var(--primary);"><i class="fa-solid fa-store"></i> Indah's Beaut� Atelier</h3>
         <p class="muted">Penyedia Kosmetik Mewah, Skincare, Haircare, Bodycare, dan Perfume Eksklusif Berkualitas Tinggi Untuk Kecantikan Anda.</p>
       </div>
       <div>
@@ -140,12 +140,14 @@
       </div>
     </div>
     <div class="container footer-bottom" style="text-align: center; padding-top: 20px; border-top: 1px solid var(--bg-beige);">
-      <span>© <span id="year"></span> Indah's Beauté Atelier. All rights reserved.</span>
+      <span>� <span id="year"></span> Indah's Beaut� Atelier. All rights reserved.</span>
     </div>
   </footer>
 
   <script src="js/default_products.js"></script>
+  <script>window.API_BASE = 'https://your-backend.example.com/api';</script>
   <script src="js/api_client.js"></script>
+
   <script src="js/script.js"></script>
   
   
@@ -159,7 +161,7 @@
         { nama: "Clara S.", bintang: 4.9, teks: "Teksturnya sangat mewah dan cepat meresap. Sangat direkomendasikan untuk ritual malam hari." }
       ],
       parfum: [
-        { nama: "Giselle R.", bintang: 5.0, teks: "Produk sesuai dengan ekspektasi — bahkan lebih dari itu. Kualitasnya terasa premium." },
+        { nama: "Giselle R.", bintang: 5.0, teks: "Produk sesuai dengan ekspektasi � bahkan lebih dari itu. Kualitasnya terasa premium." },
         { nama: "Helena W.", bintang: 4.9, teks: "Hasilnya memuaskan dan jauh lebih baik dari ekspektasi saya. Direkomendasikan." }
       ],
       default: [
@@ -207,7 +209,7 @@
               Rp ${Number(produk.price).toLocaleString('id-ID')}
             </div>
             
-            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px;">${produk.description || 'Deskripsi eksklusif produk keperawatan mewah Indah\'s Beauté Atelier.'}</p>
+            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px;">${produk.description || 'Deskripsi eksklusif produk keperawatan mewah Indah\'s Beaut� Atelier.'}</p>
             
             <button class="btn btn-primary" onclick="if(typeof addToCart === 'function') { addToCart(${produk.id}); } else { alert('Dimasukkan ke keranjang (Demo)'); }" style="padding: 14px 28px; background: var(--primary); color: var(--bg-ivory); border: none; font-weight: 500; letter-spacing: 1px; cursor: pointer;">
               <i class="fa-solid fa-cart-plus"></i> Tambahkan Ke Keranjang
@@ -240,7 +242,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       const dummyProduct = {
         id: 3,
-        name: "L'Élixir de Parfum Premium",
+        name: "L'�lixir de Parfum Premium",
         price: 2450000,
         image: "",
         description: "Parfum dengan konsentrasi tinggi extrait de parfum yang memancarkan kemewahan mawar malam hari dan vanila premium."
@@ -253,4 +255,5 @@
 </html>
 
         
+
 
